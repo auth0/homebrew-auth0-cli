@@ -5,16 +5,16 @@
 class Auth0 < Formula
   desc "Supercharge your developer workflow."
   homepage "https://cli.auth0.com"
-  version "0.3.1"
+  version "0.3.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.3.1/auth0-cli_0.3.1_Darwin_x86_64.tar.gz"
-    sha256 "bccfb021a3ac9a527fdf4c5b344421fadc85639a09cb225c7cb9e3e33f6472e1"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.3.2/auth0-cli_0.3.2_Darwin_x86_64.tar.gz"
+    sha256 "03f83900db1fb5611d35dae05f942115e85f455ab9d5352edec992bcbfeab40b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.3.1/auth0-cli_0.3.1_Linux_x86_64.tar.gz"
-    sha256 "5f16a3cd34138ec050732d1d2da4c2420dc1264365b547905ef1464b015fa349"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.3.2/auth0-cli_0.3.2_Linux_x86_64.tar.gz"
+    sha256 "e99cd341e47cffe29baf905fa09b65f9d38d09489f5200089048442093202c5e"
   end
 
   def install
