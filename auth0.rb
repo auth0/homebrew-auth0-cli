@@ -5,16 +5,17 @@
 class Auth0 < Formula
   desc "Supercharge your developer workflow."
   homepage "https://cli.auth0.com"
-  version "0.4.1"
+  version "0.4.2"
+  license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.4.1/auth0-cli_0.4.1_Darwin_x86_64.tar.gz"
-    sha256 "fef5ce52840ab3c3116b88386b7208d542573b97f8e81d47541c60a1d7c17453"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.4.2/auth0-cli_0.4.2_Darwin_x86_64.tar.gz"
+    sha256 "7accf89dd6839b9647ba4690098a283b285e542a6808c8cc9a2b98fd1e67f70d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.4.1/auth0-cli_0.4.1_Linux_x86_64.tar.gz"
-    sha256 "12055514789614f5f5b8ffc51d98e4843db98b5c5ffa4c4790dfbbd7306ab366"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.4.2/auth0-cli_0.4.2_Linux_x86_64.tar.gz"
+    sha256 "4640d604b4cfddf9f85d16e23d7ed27913f89893b451e5f945b938ebe130f0af"
   end
 
   def install
@@ -26,7 +27,7 @@ class Auth0 < Formula
   end
 
   def caveats; <<~EOS
-    Thanks for installing Auth0 CLI
+    Thanks for installing the Auth0 CLI
   EOS
   end
 end
