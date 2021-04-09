@@ -11,11 +11,11 @@ class Auth0 < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/auth0/auth0-cli/releases/download/v0.4.2/auth0-cli_0.4.2_Darwin_x86_64.tar.gz"
-    sha256 "7accf89dd6839b9647ba4690098a283b285e542a6808c8cc9a2b98fd1e67f70d"
+    sha256 "8fe061336423a278f5902d78bb66c350dc08bef08065cbd301b514dae772602c"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/auth0/auth0-cli/releases/download/v0.4.2/auth0-cli_0.4.2_Linux_x86_64.tar.gz"
-    sha256 "4640d604b4cfddf9f85d16e23d7ed27913f89893b451e5f945b938ebe130f0af"
+    sha256 "2fa4c250be2810283cd77d09f0af936cc2e84239eacead48dac737ad34474cd9"
   end
 
   def install
