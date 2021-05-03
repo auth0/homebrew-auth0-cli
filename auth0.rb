@@ -5,17 +5,25 @@
 class Auth0 < Formula
   desc "Supercharge your developer workflow."
   homepage "https://cli.auth0.com"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.5.1/auth0-cli_0.5.1_Darwin_x86_64.tar.gz"
-    sha256 "212b52670116d64e45ff6cb1685a516164ddf8fbde22ce48b14fa4244d3eed5c"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.6.0/auth0-cli_0.6.0_Darwin_x86_64.tar.gz"
+    sha256 "317c92b2ab3e9e0a064afd667326392862175b0d55a3e2c66a32094e61496ebe"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.6.0/auth0-cli_0.6.0_Darwin_arm64.tar.gz"
+    sha256 "4660c06255fcd479c03be9242ad6f273ede6ce6b2effa8043cd666b965a211a0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.5.1/auth0-cli_0.5.1_Linux_x86_64.tar.gz"
-    sha256 "996446a8e60f4d5b3bb3f7942c0319454c9301b473b478327c1d1c87f0ffd903"
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.6.0/auth0-cli_0.6.0_Linux_x86_64.tar.gz"
+    sha256 "8369a843bb70189165ea3a74ee4dccc2a33d22a26bca41a0cd10cc3c6490a5d9"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/auth0/auth0-cli/releases/download/v0.6.0/auth0-cli_0.6.0_Linux_arm64.tar.gz"
+    sha256 "72a6156cf6553447df718b1f4cb1e7bd280ca1a307f3b1e2199d15d59f2f5564"
   end
 
   def install
