@@ -5,25 +5,30 @@
 class Auth0 < Formula
   desc "Supercharge your developer workflow."
   homepage "https://cli.auth0.com"
-  version "0.7.1"
+  version "0.8.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.7.1/auth0-cli_0.7.1_Darwin_x86_64.tar.gz"
-    sha256 "b0bc56d9190bb9e0bb80474ca8f73d6e35a8ab482595ad6c30d4a52d91722c0e"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/auth0/auth0-cli/releases/download/v0.8.0/auth0-cli_0.8.0_Darwin_x86_64.tar.gz"
+      sha256 "909eb5b357f896f9414f2c4c7f69730718a8a486237ba5215fa9cd438da823a7"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/auth0/auth0-cli/releases/download/v0.8.0/auth0-cli_0.8.0_Darwin_arm64.tar.gz"
+      sha256 "d7d4cffef19a330775ebece5679e851ba78ce16db0d037772262562c64243173"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.7.1/auth0-cli_0.7.1_Darwin_arm64.tar.gz"
-    sha256 "cd89d3ccecf992bc31517cd3cfc4256710eeef2a4a755dc50bc38d79512185c7"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.7.1/auth0-cli_0.7.1_Linux_x86_64.tar.gz"
-    sha256 "423c685e7032a891467e75637a38d8b22b57ff2e8977204314e93f83d52bd157"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/auth0/auth0-cli/releases/download/v0.7.1/auth0-cli_0.7.1_Linux_arm64.tar.gz"
-    sha256 "a4731d878fcf4fa106ef774e6800ef0f62d011841a00e576c7c1aee8379ff83b"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/auth0/auth0-cli/releases/download/v0.8.0/auth0-cli_0.8.0_Linux_x86_64.tar.gz"
+      sha256 "3bdd7e03a997867244270becc08481cbd4fafa0ea822e2b6ba7c0ad743260f2b"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/auth0/auth0-cli/releases/download/v0.8.0/auth0-cli_0.8.0_Linux_arm64.tar.gz"
+      sha256 "1376d24c3da740742257c58c53576221c2b36417d73e5d03d7a4343ca2181f73"
+    end
   end
 
   def install
