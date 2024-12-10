@@ -10,7 +10,7 @@ class Auth0 < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.6.1/auth0-cli_1.7.0_Darwin_arm64.tar.gz"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.7.0/auth0-cli_1.7.0_Darwin_arm64.tar.gz"
       sha256 "4bd09c195b62ecf8f3f97f417ee57ca98e58ec4e32d3b272cf96aedfd4232f22"
 
       def install
@@ -22,7 +22,7 @@ class Auth0 < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.6.1/auth0-cli_1.7.0_Darwin_x86_64.tar.gz"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.7.0/auth0-cli_1.7.0_Darwin_x86_64.tar.gz"
       sha256 "7bdbbb6afdcd7b3d30a1407dbd4baff8c09e546a67e7ee7d556259ed4336a18b"
 
       def install
@@ -37,7 +37,7 @@ class Auth0 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.6.1/auth0-cli_1.7.0_Linux_arm64.tar.gz"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.7.0/auth0-cli_1.7.0_Linux_arm64.tar.gz"
       sha256 "479989b6c869e9ce7bf5973ca585e03df2b6086682c2748a8d96d3a056dc4950"
 
       def install
@@ -49,7 +49,7 @@ class Auth0 < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.6.1/auth0-cli_1.7.0_Linux_x86_64.tar.gz"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.7.0/auth0-cli_1.7.0_Linux_x86_64.tar.gz"
       sha256 "c6dc02a789184fce334b36c825fe142aa1d96abdf00967b6e09d6107e9e3caa0"
 
       def install
