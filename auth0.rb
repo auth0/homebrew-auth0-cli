@@ -5,13 +5,13 @@
 class Auth0 < Formula
   desc "Build, manage and test your Auth0 integrations from the command line"
   homepage "https://auth0.github.io/auth0-cli"
-  version "1.9.3"
+  version "1.10.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.9.3/auth0-cli_1.9.3_Darwin_arm64.tar.gz"
-      sha256 "0c341ec8999f13c4ea3836a3b7a36fb63b155dd504ab44ccca97fe38e3ec9676"
+    if Hardware::CPU.intel?
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.10.0/auth0-cli_1.10.0_Darwin_x86_64.tar.gz"
+      sha256 "1ae65ee91c7fdd69e040df1c4320520ed9d02d64cd29dea9b8b1d235fdc5ca16"
 
       def install
         bin.install "auth0"
@@ -21,9 +21,9 @@ class Auth0 < Formula
         (zsh_completion/"_auth0").write `#{bin}/auth0 completion zsh`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.9.3/auth0-cli_1.9.3_Darwin_x86_64.tar.gz"
-      sha256 "5d04ab47195c25fb0019ec21ec7373f8e3b1304556fc83dd0789e4db3334a184"
+    if Hardware::CPU.arm?
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.10.0/auth0-cli_1.10.0_Darwin_arm64.tar.gz"
+      sha256 "39514bfcaa6487ad1a9829385323c438b36466104a3526af02a8e93838fcad86"
 
       def install
         bin.install "auth0"
@@ -36,28 +36,32 @@ class Auth0 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.9.3/auth0-cli_1.9.3_Linux_arm64.tar.gz"
-      sha256 "992a930f93994dd159f2cdde1f06e1c6dafd376c61d5dab01f49d1b02e848050"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/auth0/auth0-cli/releases/download/v1.10.0/auth0-cli_1.10.0_Linux_x86_64.tar.gz"
+        sha256 "1bc86ca37909f7881517807e3c581c16a647866f151749ef90e2b2c9964ae211"
 
-      def install
-        bin.install "auth0"
+        def install
+          bin.install "auth0"
 
-        (bash_completion/"auth0").write `#{bin}/auth0 completion bash`
-        (fish_completion/"auth0.fish").write `#{bin}/auth0 completion fish`
-        (zsh_completion/"_auth0").write `#{bin}/auth0 completion zsh`
+          (bash_completion/"auth0").write `#{bin}/auth0 completion bash`
+          (fish_completion/"auth0.fish").write `#{bin}/auth0 completion fish`
+          (zsh_completion/"_auth0").write `#{bin}/auth0 completion zsh`
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.9.3/auth0-cli_1.9.3_Linux_x86_64.tar.gz"
-      sha256 "2557d838383f9c1a2baef7b7bddcff8a0488571c7f19215134da650540e8fd14"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/auth0/auth0-cli/releases/download/v1.10.0/auth0-cli_1.10.0_Linux_arm64.tar.gz"
+        sha256 "ff07f1fa1b73fc0d2111639686f74a94892746b92287fc8e7919466996f837bb"
 
-      def install
-        bin.install "auth0"
+        def install
+          bin.install "auth0"
 
-        (bash_completion/"auth0").write `#{bin}/auth0 completion bash`
-        (fish_completion/"auth0.fish").write `#{bin}/auth0 completion fish`
-        (zsh_completion/"_auth0").write `#{bin}/auth0 completion zsh`
+          (bash_completion/"auth0").write `#{bin}/auth0 completion bash`
+          (fish_completion/"auth0.fish").write `#{bin}/auth0 completion fish`
+          (zsh_completion/"_auth0").write `#{bin}/auth0 completion zsh`
+        end
       end
     end
   end
