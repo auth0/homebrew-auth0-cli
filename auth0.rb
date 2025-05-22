@@ -5,13 +5,13 @@
 class Auth0 < Formula
   desc "Build, manage and test your Auth0 integrations from the command line"
   homepage "https://auth0.github.io/auth0-cli"
-  version "1.13.0"
+  version "1.14.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.13.0/auth0-cli_1.13.0_Darwin_x86_64.tar.gz"
-      sha256 "56629def9c2bab561f95e90f766f978082ebb9b5d96128641eee735c536f2d50"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.14.0/auth0-cli_1.14.0_Darwin_x86_64.tar.gz"
+      sha256 "a086a515f8ef53233e21874639827e32da5a2f97ca641e02249332cef41799bd"
 
       def install
         bin.install "auth0"
@@ -22,8 +22,8 @@ class Auth0 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/auth0/auth0-cli/releases/download/v1.13.0/auth0-cli_1.13.0_Darwin_arm64.tar.gz"
-      sha256 "a2864b037344a0de9db3d2938c4409aea52dd7ab882747b38dab23e319ec39e9"
+      url "https://github.com/auth0/auth0-cli/releases/download/v1.14.0/auth0-cli_1.14.0_Darwin_arm64.tar.gz"
+      sha256 "8bdfb5d2a3bee27b0197ca9d9b220c27505d32850b429cdc7317d6ed2651a216"
 
       def install
         bin.install "auth0"
@@ -38,8 +38,8 @@ class Auth0 < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/auth0/auth0-cli/releases/download/v1.13.0/auth0-cli_1.13.0_Linux_x86_64.tar.gz"
-        sha256 "ca18f883107efb4b2e2de8049048b8d18ef7a652242f3bbd7630a15dade2936e"
+        url "https://github.com/auth0/auth0-cli/releases/download/v1.14.0/auth0-cli_1.14.0_Linux_x86_64.tar.gz"
+        sha256 "2865a5465f07e5df437471cbe9aa4f0bf7d7875a4087e52fe421f901a45c2828"
 
         def install
           bin.install "auth0"
@@ -52,8 +52,8 @@ class Auth0 < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/auth0/auth0-cli/releases/download/v1.13.0/auth0-cli_1.13.0_Linux_arm64.tar.gz"
-        sha256 "64e8ef7b905ce75188523e4c189364c7f12960f89a51eef002880f9d4caf3207"
+        url "https://github.com/auth0/auth0-cli/releases/download/v1.14.0/auth0-cli_1.14.0_Linux_arm64.tar.gz"
+        sha256 "cc4433d549276c5f7d96200e7f4e36ed7999ea37082b4b8c2a66dbd95ac9ae8e"
 
         def install
           bin.install "auth0"
