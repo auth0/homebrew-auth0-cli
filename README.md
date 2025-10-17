@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/auth0/homebrew-auth0-cli)
+
 # Auth0 CLI Homebrew Formula
 
 This repository contains the Homebrew formula to install the [Auth0 CLI](https://github.com/auth0/auth0-cli).
