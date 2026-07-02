@@ -4,12 +4,18 @@
 
 This repository contains the Homebrew formula to install the [Auth0 CLI](https://github.com/auth0/auth0-cli).
 
-> Note: The CLI is currently in an experimental state and is not supported by Auth0. It has not had a complete security review, and we do not recommend using it to interact with production tenants.
-
 ### Installation
 
 ```sh
 $ brew install auth0/auth0-cli/auth0
+```
+
+### Beta Releases
+
+New features are released on a beta track ahead of general availability. Beta builds may change and can contain features that are still under active development. To install the latest beta release:
+
+```sh
+$ brew install auth0/auth0-cli/auth0-beta
 ```
 
 ## What is Auth0?
